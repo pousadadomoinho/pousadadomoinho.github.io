@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pousada do Moinho · Pelotas/RS</title>
+<meta name="description" content="Pousada e camping com cascata, arroio e mata nativa na BR-392, km 92, em Pelotas/RS. Suítes, camping e passeio de um dia.">
+<meta property="og:title" content="Pousada do Moinho">
+<meta property="og:description" content="Cascata, arroio e mata nativa na BR-392, km 92, Pelotas/RS. Suítes, camping e passeio de um dia.">
+<meta name="theme-color" content="#23392D">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --musgo:#23392D;
+  --mata:#3E5E47;
+  --agua:#DCE9E4;
+  --papel:#F7F9F6;
+  --fuba:#E9B83A;
+  --pedra:#5F665D;
+  --linha:#C9D6CF;
+  --display:"Bricolage Grotesque",system-ui,sans-serif;
+  --texto:"Atkinson Hyperlegible",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--musgo);font-family:var(--texto);font-size:1.0625rem;line-height:1.6}
+a{color:var(--mata);text-underline-offset:.18em}
+a:focus-visible,button:focus-visible,input:focus-visible,label:focus-within{outline:3px solid var(--fuba);outline-offset:3px}
+.wrap{max-width:44rem;margin:0 auto;padding:0 1.25rem}
+
+/* topo */
+.topo{display:flex;justify-content:flex-end;padding:1rem 1.25rem 0;max-width:44rem;margin:0 auto}
+.idioma{font:600 .95rem var(--texto);background:none;border:1.5px solid var(--linha);border-radius:999px;padding:.35rem .9rem;color:var(--musgo);cursor:pointer}
+
+/* hero: o marco do km 92 */
+.hero{padding-top:1.5rem;padding-bottom:2.5rem}
+.marco{display:inline-grid;grid-template-columns:auto auto;align-items:end;column-gap:.35rem;background:var(--fuba);color:#1B1B14;border:3px solid #1B1B14;border-radius:14px;padding:.55rem 1rem .4rem;box-shadow:0 5px 0 #1B1B14;transform:rotate(-2deg);margin-bottom:1.75rem}
+.marco .br{grid-column:1/-1;font:700 1rem var(--display);letter-spacing:.02em;border-bottom:2px solid #1B1B14;padding-bottom:.2rem;margin-bottom:.15rem}
+.marco .km{font:700 1.4rem var(--display);padding-bottom:.85rem}
+.marco .num{font:800 5.5rem/0.95 var(--display);font-variation-settings:"opsz" 96}
+h1{font:800 clamp(2.4rem,10vw,4.2rem)/1.02 var(--display);margin:0 0 1rem;letter-spacing:-.02em;font-variation-settings:"opsz" 96}
+.lead{font-size:1.2rem;max-width:34ch;margin:0 0 1.75rem;color:var(--musgo)}
+.acoes{display:flex;flex-wrap:wrap;gap:.75rem}
+.botao{display:inline-flex;align-items:center;justify-content:center;min-height:3rem;padding:.7rem 1.3rem;border-radius:10px;font:700 1.05rem var(--texto);text-decoration:none;cursor:pointer;border:2px solid var(--musgo)}
+.botao.cheio{background:var(--musgo);color:var(--papel)}
+.botao.vazio{background:transparent;color:var(--musgo)}
+.botao.cheio:hover{background:var(--mata);border-color:var(--mata)}
+.botao.vazio:hover{background:var(--agua)}
+
+/* preços */
+.precos{background:var(--musgo);color:var(--papel);padding:2.25rem 0}
+.precos h2{color:var(--papel)}
+.tabela{margin:0;padding:0;list-style:none}
+.tabela li{display:grid;grid-template-columns:1fr auto;gap:.25rem 1rem;padding:1rem 0;border-top:1px solid rgba(247,249,246,.22)}
+.tabela li:last-child{border-bottom:1px solid rgba(247,249,246,.22)}
+.tabela .nome{font:700 1.25rem var(--display)}
+.tabela .valor{font:800 1.5rem var(--display);color:var(--fuba);text-align:right;white-space:nowrap}
+.tabela .det{grid-column:1/-1;color:#C9D6CF;font-size:.98rem}
+.precos .obs{margin:1rem 0 0;color:#C9D6CF;font-size:.98rem}
+
+/* seções */
+section{padding:2.75rem 0}
+section+section{border-top:1px solid var(--linha)}
+.precos+section{border-top:0}
+h2{font:700 1.85rem/1.15 var(--display);margin:0 0 1rem;letter-spacing:-.01em}
+h3{font:700 1.2rem var(--display);margin:1.5rem 0 .4rem}
+p{margin:0 0 1rem;max-width:62ch}
+ul.lista{padding-left:1.15rem;margin:0 0 1rem}
+ul.lista li{margin:.3rem 0}
+.aviso{background:var(--agua);border-left:4px solid var(--mata);padding:1rem 1.1rem;border-radius:0 10px 10px 0;margin:1.25rem 0}
+.aviso p:last-child{margin-bottom:0}
+
+/* formulário */
+form{display:grid;gap:1rem;margin-top:1.25rem}
+.linha2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+label.campo{display:grid;gap:.35rem;font-weight:700}
+label.campo span.ajuda{font-weight:400;color:var(--pedra);font-size:.95rem}
+input[type=date],input[type=number],input[type=text]{font:400 1.05rem var(--texto);color:var(--musgo);background:#fff;border:1.5px solid var(--linha);border-radius:10px;padding:.7rem .8rem;min-height:3rem;width:100%}
+fieldset{border:0;padding:0;margin:0}
+legend{font-weight:700;margin-bottom:.4rem}
+.opcoes{display:flex;flex-wrap:wrap;gap:.6rem}
+.opcoes label{display:flex;align-items:center;gap:.5rem;border:1.5px solid var(--linha);border-radius:10px;padding:.6rem .9rem;background:#fff;cursor:pointer}
+.opcoes input{accent-color:var(--musgo);width:1.15rem;height:1.15rem}
+.erro{color:#9B2C1F;font-weight:700;min-height:1.6em;margin:0}
+.nota{color:var(--pedra);font-size:.98rem}
+
+/* rodapé */
+footer{background:var(--agua);padding:2rem 0 2.5rem;margin-top:1rem}
+footer p{margin:.3rem 0}
+.redes{display:flex;flex-wrap:wrap;gap:1.25rem;margin-top:.75rem;font-weight:700}
+
+@media (max-width:520px){
+  .linha2{grid-template-columns:1fr}
+  .marco .num{font-size:4.6rem}
+  .tabela li{grid-template-columns:1fr}
+  .tabela .valor{text-align:left}
+}
+@media (prefers-reduced-motion:no-preference){
+  .marco{animation:placa .6s cubic-bezier(.2,.9,.3,1.3) both}
+  @keyframes placa{from{transform:rotate(-9deg) translateY(-12px);opacity:0}to{transform:rotate(-2deg);opacity:1}}
+}
+</style>
+</head>
+<body>
+
+<div class="topo"><button class="idioma" id="idioma" type="button" lang="es">Español</button></div>
+
+<header class="wrap hero">
+  <div class="marco" aria-hidden="true"><span class="br">BR-392</span><span class="km">km</span><span class="num">92</span></div>
+  <h1>Pousada do Moinho</h1>
+  <p class="lead" data-t="lead">Cascata, arroio e mata nativa na serra de Pelotas. Aberta o ano todo.</p>
+  <div class="acoes">
+    <a class="botao cheio" href="#reservar" data-t="cta_reservar">Pedir reserva de suíte</a>
+    <a class="botao vazio" id="wa-topo" href="https://wa.me/5553984534882" data-t="cta_whats">Chamar no WhatsApp</a>
+  </div>
+</header>
+
+<section class="precos" aria-labelledby="t-precos">
+  <div class="wrap">
+    <h2 id="t-precos" data-t="precos_t">Preços</h2>
+    <ul class="tabela">
+      <li><span class="nome" data-t="dia_n">Passar o dia</span><span class="valor" data-t="dia_v">R$ 20 por pessoa</span><span class="det" data-t="dia_d">A partir das 9h, sem reserva. Pode trazer comida.</span></li>
+      <li><span class="nome" data-t="camp_n">Camping</span><span class="valor" data-t="camp_v">R$ 40 por pessoa a noite</span><span class="det" data-t="camp_d">Traga sua barraca. Sem reserva, só avisar a hora de chegada.</span></li>
+      <li><span class="nome" data-t="suite_n">Suítes</span><span class="valor" data-t="suite_v">a partir de R$ 250</span><span class="det" data-t="suite_d">Diária para casal sem café, ou a partir de R$ 300 com café da manhã.</span></li>
+    </ul>
+    <p class="obs" data-t="precos_obs">O valor das suítes varia conforme a suíte e a data. O valor exato é confirmado pelo WhatsApp.</p>
+  </div>
+</section>
+
+<section aria-labelledby="t-suites">
+  <div class="wrap">
+    <h2 id="t-suites" data-t="suites_t">Suítes</h2>
+    <p data-t="suites_p1">Só temos suítes: muita gente chama de cabana. Em breve, esta parte vai mostrar cada suíte com fotos, quantas pessoas cabem e o que ela tem.</p>
+    <p data-t="suites_p2">Enquanto isso, as fotos estão no destaque Acomodações do nosso Instagram.</p>
+    <a class="botao vazio" href="https://www.instagram.com/pousadadomoinho_/" data-t="suites_cta">Ver fotos no Instagram</a>
+  </div>
+</section>
+
+<section aria-labelledby="t-camping">
+  <div class="wrap">
+    <h2 id="t-camping" data-t="camp_t">Camping</h2>
+    <p data-t="camp_p">São várias churrasqueiras com pontos de água e luz: algumas ao lado do arroio, outras mais afastadas, entre as árvores. Tem banheiro. Motorhome e van são bem-vindos.</p>
+    <ul class="lista">
+      <li data-t="camp_l1">R$ 40 por pessoa a noite</li>
+      <li data-t="camp_l2">Traga sua barraca</li>
+      <li data-t="camp_l3">Não precisa reservar: avise a hora de chegada pelo WhatsApp</li>
+    </ul>
+  </div>
+</section>
+
+<section aria-labelledby="t-comida">
+  <div class="wrap">
+    <h2 id="t-comida" data-t="comida_t">Comida</h2>
+    <p data-t="comida_p1">Não temos restaurante. Você pode trazer sua comida e usar as churrasqueiras.</p>
+    <p data-t="comida_p2">Na pousada vendemos pastel, sorvete e bebidas. O café da tarde (pastel e suco ou café) é só combinar na chegada. O café da manhã é para quem escolhe a diária com café.</p>
+  </div>
+</section>
+
+<section id="reservar" aria-labelledby="t-reservar">
+  <div class="wrap">
+    <h2 id="t-reservar" data-t="res_t">Pedir reserva de suíte</h2>
+    <p data-t="res_p">Preencha e toque no botão: o WhatsApp abre com o pedido pronto. O proprietário confirma a disponibilidade e o valor.</p>
+    <form id="form-reserva" novalidate>
+      <div class="linha2">
+        <label class="campo"><span data-t="f_entrada">Entrada</span><input type="date" id="entrada" required></label>
+        <label class="campo"><span data-t="f_saida">Saída</span><input type="date" id="saida" required></label>
+      </div>
+      <div class="linha2">
+        <label class="campo"><span data-t="f_adultos">Adultos</span><input type="number" id="adultos" min="1" max="20" value="2" inputmode="numeric" required></label>
+        <label class="campo"><span data-t="f_criancas">Crianças</span><input type="number" id="criancas" min="0" max="20" value="0" inputmode="numeric"></label>
+      </div>
+      <label class="campo" id="campo-idades" hidden><span data-t="f_idades">Idade das crianças</span><span class="ajuda" data-t="f_idades_aj">Por exemplo: 4 e 9</span><input type="text" id="idades" autocomplete="off"></label>
+      <fieldset>
+        <legend data-t="f_cafe">Café da manhã</legend>
+        <div class="opcoes">
+          <label><input type="radio" name="cafe" value="sim" checked><span data-t="f_cafe_sim">Com café</span></label>
+          <label><input type="radio" name="cafe" value="nao"><span data-t="f_cafe_nao">Sem café</span></label>
+        </div>
+      </fieldset>
+      <p class="erro" id="erro" role="alert"></p>
+      <button class="botao cheio" type="submit" data-t="f_enviar">Enviar pedido pelo WhatsApp</button>
+    </form>
+    <div class="aviso">
+      <p data-t="res_aviso">A reserva só vale depois da confirmação do proprietário e do sinal de 50% por Pix. O restante é pago na chegada.</p>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="t-chegar">
+  <div class="wrap">
+    <h2 id="t-chegar" data-t="ch_t">Como chegar</h2>
+    <p data-t="ch_p1">BR-392, km 92, Colônia Santa Eulália, 5º Distrito de Pelotas/RS, a cerca de 26 km do centro.</p>
+    <p data-t="ch_p2">Para quem vai a Canguçu: passe a ponte do Arroio dos Kaster, entre à direita e ande mais 200 m. Fica antes de Morro Redondo.</p>
+    <h3 data-t="ch_onibus_t">De ônibus</h3>
+    <p data-t="ch_onibus_p">Santa Cruz (linha da Colônia Maciel) ou Embaixador (linha de Canguçu). Desça na BR, a 200 m da pousada.</p>
+    <a class="botao vazio" href="https://www.google.com/maps/search/?api=1&query=Pousada+do+Moinho+Pelotas" data-t="ch_mapa">Abrir no Google Maps</a>
+  </div>
+</section>
+
+<section aria-labelledby="t-regras">
+  <div class="wrap">
+    <h2 id="t-regras" data-t="re_t">Combinados</h2>
+    <ul class="lista">
+      <li data-t="re_1">Lugar tranquilo: sem som alto.</li>
+      <li data-t="re_2">Pets são bem-vindos, na coleira.</li>
+      <li data-t="re_3">Até 100 visitantes ao mesmo tempo.</li>
+      <li data-t="re_4">Ensaios de fotos pagam a entrada normal, R$ 20 por pessoa.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Pousada do Moinho</strong></p>
+    <p>WhatsApp (53) 98453-4882</p>
+    <div class="redes">
+      <a href="https://wa.me/5553984534882">WhatsApp</a>
+      <a href="https://www.instagram.com/pousadadomoinho_/">Instagram</a>
+      <a href="https://www.facebook.com/pousadamoinho">Facebook</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const WHATS = "5553984534882";
+
+const ES = {
+  lead:"Cascada, arroyo y monte nativo en la sierra de Pelotas. Abierto todo el año.",
+  cta_reservar:"Pedir reserva de suite",
+  cta_whats:"Escribir por WhatsApp",
+  precos_t:"Precios",
+  dia_n:"Pasar el día", dia_v:"R$ 20 por persona", dia_d:"Desde las 9h, sin reserva. Puede traer comida.",
+  camp_n:"Camping", camp_v:"R$ 40 por persona por noche", camp_d:"Traiga su carpa. Sin reserva, solo avise la hora de llegada.",
+  suite_n:"Suites", suite_v:"desde R$ 250", suite_d:"Diaria para pareja sin desayuno, o desde R$ 300 con desayuno.",
+  precos_obs:"El valor de las suites varía según la suite y la fecha. El valor exacto se confirma por WhatsApp.",
+  suites_t:"Suites",
+  suites_p1:"Solo tenemos suites: mucha gente las llama cabañas. Pronto esta sección mostrará cada suite con fotos, cuántas personas caben y lo que tiene.",
+  suites_p2:"Mientras tanto, las fotos están en el destacado Acomodações de nuestro Instagram.",
+  suites_cta:"Ver fotos en Instagram",
+  camp_t:"Camping",
+  camp_p:"Hay varias parrillas con puntos de agua y luz: algunas junto al arroyo, otras más apartadas, entre los árboles. Hay baño. Motorhomes y vans son bienvenidos.",
+  camp_l1:"R$ 40 por persona por noche", camp_l2:"Traiga su carpa", camp_l3:"No hace falta reservar: avise la hora de llegada por WhatsApp",
+  comida_t:"Comida",
+  comida_p1:"No tenemos restaurante. Puede traer su comida y usar las parrillas.",
+  comida_p2:"En la posada vendemos pastel, helado y bebidas. La merienda (pastel y jugo o café) se combina al llegar. El desayuno es para quien elige la diaria con desayuno.",
+  res_t:"Pedir reserva de suite",
+  res_p:"Complete y toque el botón: WhatsApp se abre con el pedido listo. El propietario confirma la disponibilidad y el valor.",
+  f_entrada:"Llegada", f_saida:"Salida", f_adultos:"Adultos", f_criancas:"Niños",
+  f_idades:"Edad de los niños", f_idades_aj:"Por ejemplo: 4 y 9",
+  f_cafe:"Desayuno", f_cafe_sim:"Con desayuno", f_cafe_nao:"Sin desayuno",
+  f_enviar:"Enviar pedido por WhatsApp",
+  res_aviso:"La reserva solo vale después de la confirmación del propietario y de la seña del 50% por Pix. El resto se paga al llegar.",
+  ch_t:"Cómo llegar",
+  ch_p1:"BR-392, km 92, Colônia Santa Eulália, 5º Distrito de Pelotas/RS, a unos 26 km del centro.",
+  ch_p2:"Yendo hacia Canguçu: pase el puente del Arroio dos Kaster, doble a la derecha y siga 200 m. Queda antes de Morro Redondo.",
+  ch_onibus_t:"En ómnibus",
+  ch_onibus_p:"Santa Cruz (línea Colônia Maciel) o Embaixador (línea Canguçu). Bájese en la BR, a 200 m de la posada.",
+  ch_mapa:"Abrir en Google Maps",
+  re_t:"Acuerdos",
+  re_1:"Lugar tranquilo: sin música alta.", re_2:"Las mascotas son bienvenidas, con correa.",
+  re_3:"Hasta 100 visitantes al mismo tiempo.", re_4:"Las sesiones de fotos pagan la entrada normal, R$ 20 por persona."
+};
+
+const PT = {};
+document.querySelectorAll("[data-t]").forEach(el => { PT[el.dataset.t] = el.textContent; });
+
+let lang = "pt";
+try { if (localStorage.getItem("lang") === "es") lang = "es"; } catch(e) {}
+
+const msgs = {
+  pt:{err_datas:"Escolha a data de entrada e a de saída.", err_ordem:"A saída precisa ser depois da entrada.", err_adultos:"Informe pelo menos 1 adulto.",
+      intro:"Olá! Vim pela página e quero reservar uma suíte.", entrada:"Entrada", saida:"Saída", noites:"noites", noite:"noite",
+      adultos:"Adultos", criancas:"Crianças", idades:"idades", cafe:"Café da manhã", sim:"sim", nao:"não", btn:"Español",
+      topo:"Olá! Vim pela página da pousada e tenho uma dúvida."},
+  es:{err_datas:"Elija la fecha de llegada y la de salida.", err_ordem:"La salida debe ser después de la llegada.", err_adultos:"Indique al menos 1 adulto.",
+      intro:"¡Hola! Vengo de la página y quiero reservar una suite.", entrada:"Llegada", saida:"Salida", noites:"noches", noite:"noche",
+      adultos:"Adultos", criancas:"Niños", idades:"edades", cafe:"Desayuno", sim:"sí", nao:"no", btn:"Português",
+      topo:"¡Hola! Vengo de la página de la posada y tengo una consulta."}
+};
+
+function aplicar(){
+  const dict = lang === "es" ? ES : PT;
+  document.querySelectorAll("[data-t]").forEach(el => { const v = dict[el.dataset.t]; if (v) el.textContent = v; });
+  document.documentElement.lang = lang === "es" ? "es" : "pt-BR";
+  const b = document.getElementById("idioma");
+  b.textContent = msgs[lang].btn;
+  b.lang = lang === "es" ? "pt-BR" : "es";
+  document.getElementById("wa-topo").href = "https://wa.me/" + WHATS + "?text=" + encodeURIComponent(msgs[lang].topo);
+}
+
+document.getElementById("idioma").addEventListener("click", () => {
+  lang = lang === "es" ? "pt" : "es";
+  try { localStorage.setItem("lang", lang); } catch(e) {}
+  aplicar();
+});
+
+const hoje = new Date();
+const iso = d => d.toISOString().slice(0,10);
+const entrada = document.getElementById("entrada"), saida = document.getElementById("saida");
+entrada.min = iso(hoje); saida.min = iso(hoje);
+entrada.addEventListener("change", () => {
+  if (!entrada.value) return;
+  const prox = new Date(entrada.value + "T12:00:00"); prox.setDate(prox.getDate() + 1);
+  saida.min = iso(prox);
+  if (!saida.value || saida.value <= entrada.value) saida.value = iso(prox);
+});
+
+const criancas = document.getElementById("criancas"), campoIdades = document.getElementById("campo-idades");
+criancas.addEventListener("input", () => { campoIdades.hidden = !(parseInt(criancas.value,10) > 0); });
+
+const br = s => { const [a,m,d] = s.split("-"); return d + "/" + m + "/" + a; };
+
+document.getElementById("form-reserva").addEventListener("submit", ev => {
+  ev.preventDefault();
+  const m = msgs[lang], erro = document.getElementById("erro");
+  erro.textContent = "";
+  const adultos = parseInt(document.getElementById("adultos").value,10) || 0;
+  const nCri = parseInt(criancas.value,10) || 0;
+  if (!entrada.value || !saida.value) { erro.textContent = m.err_datas; return; }
+  if (saida.value <= entrada.value) { erro.textContent = m.err_ordem; return; }
+  if (adultos < 1) { erro.textContent = m.err_adultos; return; }
+  const noites = Math.round((new Date(saida.value) - new Date(entrada.value)) / 864e5);
+  const cafe = document.querySelector("input[name=cafe]:checked").value === "sim" ? m.sim : m.nao;
+  const idades = document.getElementById("idades").value.trim();
+  const linhas = [
+    m.intro,
+    m.entrada + ": " + br(entrada.value),
+    m.saida + ": " + br(saida.value) + " (" + noites + " " + (noites === 1 ? m.noite : m.noites) + ")",
+    m.adultos + ": " + adultos,
+    m.criancas + ": " + nCri + (nCri > 0 && idades ? " (" + m.idades + ": " + idades + ")" : ""),
+    m.cafe + ": " + cafe
+  ];
+  window.location.href = "https://wa.me/" + WHATS + "?text=" + encodeURIComponent(linhas.join("\n"));
+});
+
+aplicar();
+</script>
+</body>
+</html>
