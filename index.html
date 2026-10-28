@@ -70,6 +70,11 @@ h3{font:700 1.2rem var(--display);margin:1.5rem 0 .4rem}
 p{margin:0 0 1rem;max-width:62ch}
 ul.lista{padding-left:1.15rem;margin:0 0 1rem}
 ul.lista li{margin:.3rem 0}
+ul.suites{list-style:none;padding:0;margin:1.25rem 0 1.5rem;border-top:2px solid var(--musgo)}
+ul.suites li{padding:1rem 0 .9rem;border-bottom:1px solid var(--linha)}
+ul.suites h3{margin:0 0 .15rem;font-size:1.35rem}
+ul.suites p{margin:0}
+ul.suites .camas{color:var(--mata);font-weight:700}
 .aviso{background:var(--agua);border-left:4px solid var(--mata);padding:1rem 1.1rem;border-radius:0 10px 10px 0;margin:1.25rem 0}
 .aviso p:last-child{margin-bottom:0}
 
@@ -78,7 +83,7 @@ form{display:grid;gap:1rem;margin-top:1.25rem}
 .linha2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 label.campo{display:grid;gap:.35rem;font-weight:700}
 label.campo span.ajuda{font-weight:400;color:var(--pedra);font-size:.95rem}
-input[type=date],input[type=number],input[type=text]{font:400 1.05rem var(--texto);color:var(--musgo);background:#fff;border:1.5px solid var(--linha);border-radius:10px;padding:.7rem .8rem;min-height:3rem;width:100%}
+input[type=date],input[type=number],input[type=text],select{font:400 1.05rem var(--texto);color:var(--musgo);background:#fff;border:1.5px solid var(--linha);border-radius:10px;padding:.7rem .8rem;min-height:3rem;width:100%}
 fieldset{border:0;padding:0;margin:0}
 legend{font-weight:700;margin-bottom:.4rem}
 .opcoes{display:flex;flex-wrap:wrap;gap:.6rem}
@@ -133,8 +138,17 @@ footer p{margin:.3rem 0}
 <section aria-labelledby="t-suites">
   <div class="wrap">
     <h2 id="t-suites" data-t="suites_t">Suítes</h2>
-    <p data-t="suites_p1">Só temos suítes: muita gente chama de cabana. Em breve, esta parte vai mostrar cada suíte com fotos, quantas pessoas cabem e o que ela tem.</p>
-    <p data-t="suites_p2">Enquanto isso, as fotos estão no destaque Acomodações do nosso Instagram.</p>
+    <p data-t="suites_p1">São 5 suítes, todas com banheiro (muita gente chama de cabana). O valor varia conforme a suíte e a data.</p>
+    <ul class="suites">
+      <li><h3>Lua de Mel</h3><p class="camas" data-t="s1_c">1 cama de casal</p><p data-t="s1_d">Ar-condicionado, TV, frigobar e churrasqueira com vista para a cachoeira.</p></li>
+      <li><h3>Azul</h3><p class="camas" data-t="s2_c">1 cama de casal e 2 de solteiro</p><p data-t="s2_d">Ar-condicionado, TV, frigobar e churrasqueira com vista para a cachoeira.</p></li>
+      <li><h3>Cachoeira</h3><p class="camas" data-t="s3_c">1 cama de casal e 2 de solteiro</p><p data-t="s3_d">Salamandra, banheira, ar-condicionado, TV, frigobar e churrasqueira com vista para a cachoeira.</p></li>
+      <li><h3>Lareira</h3><p class="camas" data-t="s4_c">1 cama de casal e 1 de solteiro</p><p data-t="s4_d">Lareira, TV, frigobar e garagem.</p></li>
+      <li><h3>Verde</h3><p class="camas" data-t="s5_c">1 cama de casal e 3 de solteiro</p><p data-t="s5_d">Ar-condicionado, TV, geladeira, fogão e garagem com churrasqueira.</p></li>
+    </ul>
+    <h3 data-t="longa_t">Estadias longas</h3>
+    <p data-t="longa_p">Também alugamos por mês. Em pacotes de mais de 3 diárias em dias de semana, tem desconto: peça o valor pelo WhatsApp.</p>
+    <p data-t="suites_p2">As fotos estão no destaque Acomodações do nosso Instagram.</p>
     <a class="botao vazio" href="https://www.instagram.com/pousadadomoinho_/" data-t="suites_cta">Ver fotos no Instagram</a>
   </div>
 </section>
@@ -142,7 +156,7 @@ footer p{margin:.3rem 0}
 <section aria-labelledby="t-camping">
   <div class="wrap">
     <h2 id="t-camping" data-t="camp_t">Camping</h2>
-    <p data-t="camp_p">São várias churrasqueiras com pontos de água e luz: algumas ao lado do arroio, outras mais afastadas, entre as árvores. Tem banheiro. Motorhome e van são bem-vindos.</p>
+    <p data-t="camp_p">São várias churrasqueiras com mesas, água encanada, luz e tomada 220 V: algumas ao lado das cachoeiras e do arroio, outras mais afastadas, entre as árvores. Os banheiros têm água quente. Motorhome e van são bem-vindos.</p>
     <ul class="lista">
       <li data-t="camp_l1">R$ 40 por pessoa a noite</li>
       <li data-t="camp_l2">Traga sua barraca</li>
@@ -168,6 +182,12 @@ footer p{margin:.3rem 0}
         <label class="campo"><span data-t="f_entrada">Entrada</span><input type="date" id="entrada" required></label>
         <label class="campo"><span data-t="f_saida">Saída</span><input type="date" id="saida" required></label>
       </div>
+      <label class="campo"><span data-t="f_suite">Suíte</span>
+        <select id="suite">
+          <option value="" data-t="f_suite_any">Sem preferência</option>
+          <option>Lua de Mel</option><option>Azul</option><option>Cachoeira</option><option>Lareira</option><option>Verde</option>
+        </select>
+      </label>
       <div class="linha2">
         <label class="campo"><span data-t="f_adultos">Adultos</span><input type="number" id="adultos" min="1" max="20" value="2" inputmode="numeric" required></label>
         <label class="campo"><span data-t="f_criancas">Crianças</span><input type="number" id="criancas" min="0" max="20" value="0" inputmode="numeric"></label>
@@ -237,11 +257,18 @@ const ES = {
   suite_n:"Suites", suite_v:"desde R$ 250", suite_d:"Diaria para pareja sin desayuno, o desde R$ 300 con desayuno.",
   precos_obs:"El valor de las suites varía según la suite y la fecha. El valor exacto se confirma por WhatsApp.",
   suites_t:"Suites",
-  suites_p1:"Solo tenemos suites: mucha gente las llama cabañas. Pronto esta sección mostrará cada suite con fotos, cuántas personas caben y lo que tiene.",
-  suites_p2:"Mientras tanto, las fotos están en el destacado Acomodações de nuestro Instagram.",
+  suites_p1:"Son 5 suites, todas con baño (mucha gente las llama cabañas). El valor varía según la suite y la fecha.",
+  s1_c:"1 cama matrimonial", s1_d:"Aire acondicionado, TV, frigobar y parrilla con vista a la cascada.",
+  s2_c:"1 cama matrimonial y 2 individuales", s2_d:"Aire acondicionado, TV, frigobar y parrilla con vista a la cascada.",
+  s3_c:"1 cama matrimonial y 2 individuales", s3_d:"Salamandra, bañera, aire acondicionado, TV, frigobar y parrilla con vista a la cascada.",
+  s4_c:"1 cama matrimonial y 1 individual", s4_d:"Chimenea, TV, frigobar y garaje.",
+  s5_c:"1 cama matrimonial y 3 individuales", s5_d:"Aire acondicionado, TV, heladera, cocina y garaje con parrilla.",
+  longa_t:"Estadías largas", longa_p:"También alquilamos por mes. En paquetes de más de 3 noches entre semana hay descuento: pida el valor por WhatsApp.",
+  f_suite:"Suite", f_suite_any:"Sin preferencia",
+  suites_p2:"Las fotos están en el destacado Acomodações de nuestro Instagram.",
   suites_cta:"Ver fotos en Instagram",
   camp_t:"Camping",
-  camp_p:"Hay varias parrillas con puntos de agua y luz: algunas junto al arroyo, otras más apartadas, entre los árboles. Hay baño. Motorhomes y vans son bienvenidos.",
+  camp_p:"Hay varias parrillas con mesas, agua corriente, luz y enchufe de 220 V: algunas junto a las cascadas y al arroyo, otras más apartadas, entre los árboles. Los baños tienen agua caliente. Motorhomes y vans son bienvenidos.",
   camp_l1:"R$ 40 por persona por noche", camp_l2:"Traiga su carpa", camp_l3:"No hace falta reservar: avise la hora de llegada por WhatsApp",
   comida_t:"Comida",
   comida_p1:"No tenemos restaurante. Puede traer su comida y usar las parrillas.",
@@ -272,11 +299,11 @@ try { if (localStorage.getItem("lang") === "es") lang = "es"; } catch(e) {}
 
 const msgs = {
   pt:{err_datas:"Escolha a data de entrada e a de saída.", err_ordem:"A saída precisa ser depois da entrada.", err_adultos:"Informe pelo menos 1 adulto.",
-      intro:"Olá! Vim pela página e quero reservar uma suíte.", entrada:"Entrada", saida:"Saída", noites:"noites", noite:"noite",
+      intro:"Olá! Vim pela página e quero reservar uma suíte.", suite:"Suíte", semPref:"sem preferência", entrada:"Entrada", saida:"Saída", noites:"noites", noite:"noite",
       adultos:"Adultos", criancas:"Crianças", idades:"idades", cafe:"Café da manhã", sim:"sim", nao:"não", btn:"Español",
       topo:"Olá! Vim pela página da pousada e tenho uma dúvida."},
   es:{err_datas:"Elija la fecha de llegada y la de salida.", err_ordem:"La salida debe ser después de la llegada.", err_adultos:"Indique al menos 1 adulto.",
-      intro:"¡Hola! Vengo de la página y quiero reservar una suite.", entrada:"Llegada", saida:"Salida", noites:"noches", noite:"noche",
+      intro:"¡Hola! Vengo de la página y quiero reservar una suite.", suite:"Suite", semPref:"sin preferencia", entrada:"Llegada", saida:"Salida", noites:"noches", noite:"noche",
       adultos:"Adultos", criancas:"Niños", idades:"edades", cafe:"Desayuno", sim:"sí", nao:"no", btn:"Português",
       topo:"¡Hola! Vengo de la página de la posada y tengo una consulta."}
 };
@@ -327,6 +354,7 @@ document.getElementById("form-reserva").addEventListener("submit", ev => {
   const idades = document.getElementById("idades").value.trim();
   const linhas = [
     m.intro,
+    m.suite + ": " + (document.getElementById("suite").value || m.semPref),
     m.entrada + ": " + br(entrada.value),
     m.saida + ": " + br(saida.value) + " (" + noites + " " + (noites === 1 ? m.noite : m.noites) + ")",
     m.adultos + ": " + adultos,
