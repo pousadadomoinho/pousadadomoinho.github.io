@@ -97,6 +97,13 @@ footer{background:var(--agua);padding:2rem 0 2.5rem;margin-top:1rem}
 footer p{margin:.3rem 0}
 .redes{display:flex;flex-wrap:wrap;gap:1.25rem;margin-top:.75rem;font-weight:700}
 
+.capa{margin:2rem 0 0;border-radius:18px;overflow:hidden;aspect-ratio:4/3;background:var(--agua)}
+.capa img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block}
+.galeria{display:flex;gap:.75rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.25rem max(1.25rem,calc((100vw - 44rem)/2 + 1.25rem)) 1rem;margin-top:1.25rem;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+.galeria:focus-visible{outline:3px solid var(--fuba);outline-offset:-3px}
+.galeria figure{margin:0;flex:0 0 auto;scroll-snap-align:center}
+.galeria img{height:15rem;width:auto;max-width:82vw;object-fit:cover;border-radius:12px;display:block;background:var(--agua)}
+@media (min-width:700px){.galeria img{height:18rem}}
 @media (max-width:520px){
   .linha2{grid-template-columns:1fr}
   .marco .num{font-size:4.6rem}
@@ -121,6 +128,7 @@ footer p{margin:.3rem 0}
     <a class="botao cheio" href="#reservar" data-t="cta_reservar">Pedir reserva de suíte</a>
     <a class="botao vazio" id="wa-topo" href="https://wa.me/5553984534882" data-t="cta_whats">Chamar no WhatsApp</a>
   </div>
+  <figure class="capa"><img src="img/fachada.jpg" alt="Casa principal da Pousada do Moinho, branca com janelas verdes, entre árvores e hortênsias" fetchpriority="high"></figure>
 </header>
 
 <section class="precos" aria-labelledby="t-precos">
@@ -133,6 +141,14 @@ footer p{margin:.3rem 0}
     </ul>
     <p class="obs" data-t="precos_obs">Crianças de até 7 anos não pagam. O valor das suítes varia conforme a suíte e a data, e o valor exato é confirmado pelo WhatsApp.</p>
   </div>
+</section>
+
+<section aria-labelledby="t-lugar">
+  <div class="wrap">
+    <h2 id="t-lugar" data-t="lugar_t">Cachoeiras e jardim</h2>
+    <p data-t="lugar_p">Cachoeiras, arroio, trilha e mata nativa dentro da propriedade. A entrada para passar o dia dá acesso a tudo.</p>
+  </div>
+    <div class="galeria" role="region" aria-label="Fotos das cachoeiras e do jardim" tabindex="0"><figure><img src="img/cachoeira-1.jpg" alt="Cascata e poço de água" loading="lazy" decoding="async"></figure><figure><img src="img/cachoeira-5.jpg" alt="Cachoeira com muita água" loading="lazy" decoding="async"></figure><figure><img src="img/cachoeira-3.jpg" alt="Queda d’água entre as pedras" loading="lazy" decoding="async"></figure><figure><img src="img/cachoeira-2.jpg" alt="Cascata baixa e areia na beira" loading="lazy" decoding="async"></figure><figure><img src="img/cachoeira-4.jpg" alt="Cachoeira entre o mato" loading="lazy" decoding="async"></figure><figure><img src="img/cachoeira-6.jpg" alt="Água correndo sobre a pedra" loading="lazy" decoding="async"></figure><figure><img src="img/jardim-hortensias.jpg" alt="Hortênsias azuis na entrada" loading="lazy" decoding="async"></figure><figure><img src="img/jardim-trilha.jpg" alt="Gramado e placas da trilha" loading="lazy" decoding="async"></figure><figure><img src="img/jardim-lago.jpg" alt="Jardim, lago e aves" loading="lazy" decoding="async"></figure><figure><img src="img/jardim-balanco.jpg" alt="Balanço no bosque" loading="lazy" decoding="async"></figure></div>
 </section>
 
 <section aria-labelledby="t-suites">
@@ -148,9 +164,10 @@ footer p{margin:.3rem 0}
     </ul>
     <h3 data-t="longa_t">Estadias longas</h3>
     <p data-t="longa_p">Também alugamos por mês. Em pacotes de mais de 3 diárias em dias de semana, tem desconto: peça o valor pelo WhatsApp.</p>
-    <p data-t="suites_p2">As fotos estão no destaque Acomodações do nosso Instagram.</p>
+    <p data-t="suites_p2">Mais fotos no destaque Acomodações do nosso Instagram.</p>
     <a class="botao vazio" href="https://www.instagram.com/pousadadomoinho_/" data-t="suites_cta">Ver fotos no Instagram</a>
   </div>
+    <div class="galeria" role="region" aria-label="Fotos das suítes" tabindex="0"><figure><img src="img/suite-a.jpg" alt="Suíte com teto de madeira e várias camas" loading="lazy" decoding="async"></figure><figure><img src="img/suite-c.jpg" alt="Suíte com lareira" loading="lazy" decoding="async"></figure><figure><img src="img/suite-b.jpg" alt="Suíte com porta para a varanda" loading="lazy" decoding="async"></figure><figure><img src="img/suite-churrasqueira.jpg" alt="Varanda com churrasqueira e pia" loading="lazy" decoding="async"></figure><figure><img src="img/suite-d.jpg" alt="Suíte com cama de casal" loading="lazy" decoding="async"></figure><figure><img src="img/suite-e.jpg" alt="Suíte com TV e ventilador de teto" loading="lazy" decoding="async"></figure><figure><img src="img/suite-cozinha.jpg" alt="Cozinha com geladeira e fogão" loading="lazy" decoding="async"></figure><figure><img src="img/suite-banheiro.jpg" alt="Banheiro de suíte" loading="lazy" decoding="async"></figure></div>
 </section>
 
 <section aria-labelledby="t-camping">
@@ -163,6 +180,8 @@ footer p{margin:.3rem 0}
       <li data-t="camp_l3">Não precisa reservar: avise a hora de chegada pelo WhatsApp</li>
     </ul>
   </div>
+    <div class="galeria" role="region" aria-label="Fotos do camping" tabindex="0"><figure><img src="img/camping-1.jpg" alt="Churrasqueira e mesa sob as árvores, ao lado do arroio" loading="lazy" decoding="async"></figure><figure><img src="img/camping-4.jpg" alt="Churrasqueira e mesa de alvenaria" loading="lazy" decoding="async"></figure><figure><img src="img/camping-2.jpg" alt="Churrasqueira junto ao arroio" loading="lazy" decoding="async"></figure><figure><img src="img/camping-3.jpg" alt="Mesa e churrasqueira perto do gramado" loading="lazy" decoding="async"></figure><figure><img src="img/camping-6.jpg" alt="Churrasqueira no bosque" loading="lazy" decoding="async"></figure><figure><img src="img/camping-5.jpg" alt="Área de camping entre as árvores" loading="lazy" decoding="async"></figure><figure><img src="img/camping-gramado.jpg" alt="Gramado para barracas" loading="lazy" decoding="async"></figure><figure><img src="img/camping-campo.jpg" alt="Gramado aberto com hortênsias" loading="lazy" decoding="async"></figure><figure><img src="img/camping-placa.jpg" alt="Placas da trilha e da cachoeira" loading="lazy" decoding="async"></figure></div>
+
 </section>
 
 <section aria-labelledby="t-comida">
@@ -171,6 +190,8 @@ footer p{margin:.3rem 0}
     <p data-t="comida_p1">Não temos restaurante. Você pode trazer sua comida e usar as churrasqueiras.</p>
     <p data-t="comida_p2">Na pousada vendemos pastel, sorvete e bebidas. O café da tarde (pastel e suco ou café) é só combinar na chegada. O café da manhã é para quem escolhe a diária com café.</p>
   </div>
+    <div class="galeria" role="region" aria-label="Fotos do café da manhã" tabindex="0"><figure><img src="img/cafe-mesa.jpg" alt="Mesa do café da manhã com pães, frios e frutas" loading="lazy" decoding="async"></figure><figure><img src="img/cafe-salao.jpg" alt="Salão do café com janelões para o verde" loading="lazy" decoding="async"></figure></div>
+
 </section>
 
 <section id="reservar" aria-labelledby="t-reservar">
@@ -256,6 +277,7 @@ const ES = {
   camp_n:"Camping", camp_v:"R$ 40 por persona por noche", camp_d:"Traiga su carpa. Sin reserva, solo avise la hora de llegada.",
   suite_n:"Suites", suite_v:"desde R$ 250", suite_d:"Diaria para pareja sin desayuno, o desde R$ 300 con desayuno.",
   precos_obs:"Los niños de hasta 7 años no pagan. El valor de las suites varía según la suite y la fecha, y el valor exacto se confirma por WhatsApp.",
+  lugar_t:"Cascadas y jardín", lugar_p:"Cascadas, arroyo, sendero y monte nativo dentro del predio. La entrada para pasar el día da acceso a todo.",
   suites_t:"Suites",
   suites_p1:"Son 5 suites, todas con baño (mucha gente las llama cabañas). El valor varía según la suite y la fecha.",
   s1_c:"1 cama matrimonial", s1_d:"Aire acondicionado, TV, frigobar y parrilla con vista a la cascada.",
@@ -265,7 +287,7 @@ const ES = {
   s5_c:"1 cama matrimonial y 3 individuales", s5_d:"Aire acondicionado, TV, heladera, cocina y garaje con parrilla.",
   longa_t:"Estadías largas", longa_p:"También alquilamos por mes. En paquetes de más de 3 noches entre semana hay descuento: pida el valor por WhatsApp.",
   f_suite:"Suite", f_suite_any:"Sin preferencia",
-  suites_p2:"Las fotos están en el destacado Acomodações de nuestro Instagram.",
+  suites_p2:"Más fotos en el destacado Acomodações de nuestro Instagram.",
   suites_cta:"Ver fotos en Instagram",
   camp_t:"Camping",
   camp_p:"Hay varias parrillas con mesas, agua corriente, luz y enchufe de 220 V: algunas junto a las cascadas y al arroyo, otras más apartadas, entre los árboles. Los baños tienen agua caliente. Motorhomes y vans son bienvenidos.",
