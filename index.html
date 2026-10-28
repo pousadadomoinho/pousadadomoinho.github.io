@@ -75,6 +75,10 @@ ul.suites li{padding:1rem 0 .9rem;border-bottom:1px solid var(--linha)}
 ul.suites h3{margin:0 0 .15rem;font-size:1.35rem}
 ul.suites p{margin:0}
 ul.suites .camas{color:var(--mata);font-weight:700}
+h3.grupo{margin:1.75rem 0 0;font-size:1.05rem;color:var(--pedra);font-family:var(--texto)}
+.fotos{display:flex;gap:.5rem;margin-top:.7rem;overflow-x:auto}
+.fotos img{height:9rem;width:auto;border-radius:10px;display:block}
+@media (min-width:700px){.fotos img{height:11rem}}
 .aviso{background:var(--agua);border-left:4px solid var(--mata);padding:1rem 1.1rem;border-radius:0 10px 10px 0;margin:1.25rem 0}
 .aviso p:last-child{margin-bottom:0}
 
@@ -155,19 +159,24 @@ footer p{margin:.3rem 0}
   <div class="wrap">
     <h2 id="t-suites" data-t="suites_t">Suítes</h2>
     <p data-t="suites_p1">São 5 suítes, todas com banheiro (muita gente chama de cabana). O valor varia conforme a suíte e a data.</p>
+    <h3 class="grupo" data-t="g1">No prédio de baixo, perto da cachoeira</h3>
     <ul class="suites">
-      <li><h3>Lua de Mel</h3><p class="camas" data-t="s1_c">1 cama de casal</p><p data-t="s1_d">Ar-condicionado, TV, frigobar e churrasqueira com vista para a cachoeira.</p></li>
-      <li><h3>Azul</h3><p class="camas" data-t="s2_c">1 cama de casal e 2 de solteiro</p><p data-t="s2_d">Ar-condicionado, TV, frigobar e churrasqueira com vista para a cachoeira.</p></li>
+      <li><h3>Lua de Mel</h3><p class="camas" data-t="s1_c">1 cama de casal</p><p data-t="s1_d">Sacada grande com churrasqueira e vista para a cachoeira. Ar-condicionado, TV e frigobar.</p></li>
+      <li><h3>Azul</h3><p class="camas" data-t="s2_c">1 cama de casal e 2 de solteiro</p><p data-t="s2_d">Ar-condicionado, TV, frigobar e churrasqueira com vista para a cachoeira.</p>
+        <div class="fotos"><img src="img/suite-a.jpg" alt="Suíte Azul: cama de casal, camas de solteiro e teto de madeira" loading="lazy"><img src="img/suite-b.jpg" alt="Suíte Azul: cama de casal e porta para a sacada" loading="lazy"></div></li>
       <li><h3>Cachoeira</h3><p class="camas" data-t="s3_c">1 cama de casal e 2 de solteiro</p><p data-t="s3_d">Salamandra, banheira, ar-condicionado, TV, frigobar e churrasqueira com vista para a cachoeira.</p></li>
-      <li><h3>Lareira</h3><p class="camas" data-t="s4_c">1 cama de casal e 1 de solteiro</p><p data-t="s4_d">Lareira, TV, frigobar e garagem.</p></li>
-      <li><h3>Verde</h3><p class="camas" data-t="s5_c">1 cama de casal e 3 de solteiro</p><p data-t="s5_d">Ar-condicionado, TV, geladeira, fogão e garagem com churrasqueira.</p></li>
+    </ul>
+    <h3 class="grupo" data-t="g2">No prédio de cima</h3>
+    <ul class="suites">
+      <li><h3>Lareira</h3><p class="camas" data-t="s4_c">1 cama de casal e 1 de solteiro</p><p data-t="s4_d">Lareira, TV, frigobar e garagem.</p>
+        <div class="fotos"><img src="img/suite-c.jpg" alt="Suíte Lareira: lareira de tijolos e duas camas" loading="lazy"></div></li>
+      <li><h3>Verde</h3><p class="camas" data-t="s5_c">1 cama de casal e 3 de solteiro</p><p data-t="s5_d">A mais ampla. Ar-condicionado, TV, geladeira, fogão e garagem com churrasqueira.</p></li>
     </ul>
     <h3 data-t="longa_t">Estadias longas</h3>
     <p data-t="longa_p">Também alugamos por mês. Em pacotes de mais de 3 diárias em dias de semana, tem desconto: peça o valor pelo WhatsApp.</p>
     <p data-t="suites_p2">Mais fotos no destaque Acomodações do nosso Instagram.</p>
     <a class="botao vazio" href="https://www.instagram.com/pousadadomoinho_/" data-t="suites_cta">Ver fotos no Instagram</a>
   </div>
-    <div class="galeria" role="region" aria-label="Fotos das suítes" tabindex="0"><figure><img src="img/suite-a.jpg" alt="Suíte com teto de madeira e várias camas" loading="lazy" decoding="async"></figure><figure><img src="img/suite-c.jpg" alt="Suíte com lareira" loading="lazy" decoding="async"></figure><figure><img src="img/suite-b.jpg" alt="Suíte com porta para a varanda" loading="lazy" decoding="async"></figure><figure><img src="img/suite-churrasqueira.jpg" alt="Varanda com churrasqueira e pia" loading="lazy" decoding="async"></figure><figure><img src="img/suite-d.jpg" alt="Suíte com cama de casal" loading="lazy" decoding="async"></figure><figure><img src="img/suite-e.jpg" alt="Suíte com TV e ventilador de teto" loading="lazy" decoding="async"></figure><figure><img src="img/suite-cozinha.jpg" alt="Cozinha com geladeira e fogão" loading="lazy" decoding="async"></figure><figure><img src="img/suite-banheiro.jpg" alt="Banheiro de suíte" loading="lazy" decoding="async"></figure></div>
 </section>
 
 <section aria-labelledby="t-camping">
@@ -280,11 +289,12 @@ const ES = {
   lugar_t:"Cascadas y jardín", lugar_p:"Cascadas, arroyo, sendero y monte nativo dentro del predio. La entrada para pasar el día da acceso a todo.",
   suites_t:"Suites",
   suites_p1:"Son 5 suites, todas con baño (mucha gente las llama cabañas). El valor varía según la suite y la fecha.",
-  s1_c:"1 cama matrimonial", s1_d:"Aire acondicionado, TV, frigobar y parrilla con vista a la cascada.",
+  g1:"En el edificio de abajo, cerca de la cascada", g2:"En el edificio de arriba",
+  s1_c:"1 cama matrimonial", s1_d:"Balcón grande con parrilla y vista a la cascada. Aire acondicionado, TV y frigobar.",
   s2_c:"1 cama matrimonial y 2 individuales", s2_d:"Aire acondicionado, TV, frigobar y parrilla con vista a la cascada.",
   s3_c:"1 cama matrimonial y 2 individuales", s3_d:"Salamandra, bañera, aire acondicionado, TV, frigobar y parrilla con vista a la cascada.",
   s4_c:"1 cama matrimonial y 1 individual", s4_d:"Chimenea, TV, frigobar y garaje.",
-  s5_c:"1 cama matrimonial y 3 individuales", s5_d:"Aire acondicionado, TV, heladera, cocina y garaje con parrilla.",
+  s5_c:"1 cama matrimonial y 3 individuales", s5_d:"La más amplia. Aire acondicionado, TV, heladera, cocina y garaje con parrilla.",
   longa_t:"Estadías largas", longa_p:"También alquilamos por mes. En paquetes de más de 3 noches entre semana hay descuento: pida el valor por WhatsApp.",
   f_suite:"Suite", f_suite_any:"Sin preferencia",
   suites_p2:"Más fotos en el destacado Acomodações de nuestro Instagram.",
