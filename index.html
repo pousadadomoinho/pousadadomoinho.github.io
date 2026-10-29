@@ -77,8 +77,8 @@ ul.suites p{margin:0}
 ul.suites .camas{color:var(--mata);font-weight:700}
 h3.grupo{margin:1.75rem 0 0;font-size:1.05rem;color:var(--pedra);font-family:var(--texto)}
 .fotos{display:flex;gap:.5rem;margin-top:.7rem;overflow-x:auto}
-.fotos img{height:9rem;width:auto;border-radius:10px;display:block}
-@media (min-width:700px){.fotos img{height:11rem}}
+.fotos img,.fotos video{height:9rem;width:auto;border-radius:10px;display:block;flex:0 0 auto;background:var(--agua)}
+@media (min-width:700px){.fotos img,.fotos video{height:11rem}}
 .aviso{background:var(--agua);border-left:4px solid var(--mata);padding:1rem 1.1rem;border-radius:0 10px 10px 0;margin:1.25rem 0}
 .aviso p:last-child{margin-bottom:0}
 
@@ -161,16 +161,19 @@ footer p{margin:.3rem 0}
     <p data-t="suites_p1">São 5 suítes, todas com banheiro (muita gente chama de cabana). O valor varia conforme a suíte e a data.</p>
     <h3 class="grupo" data-t="g1">No prédio de baixo, perto da cachoeira</h3>
     <ul class="suites">
-      <li><h3>Lua de Mel</h3><p class="camas" data-t="s1_c">1 cama de casal</p><p data-t="s1_d">Sacada grande com churrasqueira e vista para a cachoeira. Ar-condicionado, TV e frigobar.</p></li>
+      <li><h3>Lua de Mel</h3><p class="camas" data-t="s1_c">1 cama de casal</p><p data-t="s1_d">Sacada grande com churrasqueira e vista para a cachoeira. Ar-condicionado, TV e frigobar.</p>
+        <div class="fotos"><video src="img/luademel-sacada.mp4" poster="img/luademel-vista.jpg" controls muted playsinline preload="none" aria-label="Vídeo da sacada da suíte Lua de Mel com vista para a cachoeira"></video><img src="img/luademel-arroio.jpg" alt="Vista da sacada da Lua de Mel para o arroio e a mata" loading="lazy"><img src="img/luademel-sacada.jpg" alt="Sacada da Lua de Mel com churrasqueira" loading="lazy"><img src="img/luademel-cama.jpg" alt="Cama de casal da suíte Lua de Mel" loading="lazy"><img src="img/luademel-quarto.jpg" alt="Mesa e janela da suíte Lua de Mel" loading="lazy"></div></li>
       <li><h3>Azul</h3><p class="camas" data-t="s2_c">1 cama de casal e 2 de solteiro</p><p data-t="s2_d">Ar-condicionado, TV, frigobar e churrasqueira com vista para a cachoeira.</p>
         <div class="fotos"><img src="img/suite-a.jpg" alt="Suíte Azul: cama de casal, camas de solteiro e teto de madeira" loading="lazy"><img src="img/suite-b.jpg" alt="Suíte Azul: cama de casal e porta para a sacada" loading="lazy"></div></li>
-      <li><h3>Cachoeira</h3><p class="camas" data-t="s3_c">1 cama de casal e 2 de solteiro</p><p data-t="s3_d">Salamandra, banheira, ar-condicionado, TV, frigobar e churrasqueira com vista para a cachoeira.</p></li>
+      <li><h3>Cachoeira</h3><p class="camas" data-t="s3_c">1 cama de casal e 2 de solteiro</p><p data-t="s3_d">Salamandra, banheira, ar-condicionado, TV, frigobar e churrasqueira com vista para a cachoeira.</p>
+        <div class="fotos"><img src="img/cachoeira-suite.jpg" alt="Suíte Cachoeira: cama de casal e parede laranja" loading="lazy"></div></li>
     </ul>
     <h3 class="grupo" data-t="g2">No prédio de cima</h3>
     <ul class="suites">
       <li><h3>Lareira</h3><p class="camas" data-t="s4_c">1 cama de casal e 1 de solteiro</p><p data-t="s4_d">Lareira, TV, frigobar e garagem.</p>
-        <div class="fotos"><img src="img/suite-c.jpg" alt="Suíte Lareira: lareira de tijolos e duas camas" loading="lazy"></div></li>
-      <li><h3>Verde</h3><p class="camas" data-t="s5_c">1 cama de casal e 3 de solteiro</p><p data-t="s5_d">A mais ampla. Ar-condicionado, TV, geladeira, fogão e garagem com churrasqueira.</p></li>
+        <div class="fotos"><img src="img/lareira-2.jpg" alt="Suíte Lareira: lareira de tijolos, cama de casal e de solteiro" loading="lazy"><img src="img/suite-c.jpg" alt="Suíte Lareira: lareira de tijolos e duas camas" loading="lazy"></div></li>
+      <li><h3>Verde</h3><p class="camas" data-t="s5_c">1 cama de casal e 3 de solteiro</p><p data-t="s5_d">A mais ampla. Ar-condicionado, TV, geladeira, fogão e garagem com churrasqueira.</p>
+        <div class="fotos"><img src="img/verde.jpg" alt="Suíte Verde: cama de casal, beliche e cozinha com fogão e geladeira" loading="lazy"></div></li>
     </ul>
     <h3 data-t="longa_t">Estadias longas</h3>
     <p data-t="longa_p">Também alugamos por mês. Em pacotes de mais de 3 diárias em dias de semana, tem desconto: peça o valor pelo WhatsApp.</p>
